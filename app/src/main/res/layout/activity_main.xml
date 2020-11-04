@@ -364,18 +364,20 @@
         android:layout_height="74dp"
         android:background="#333"
         android:baselineAlignBottom="true"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/buttonac"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bdivide"
         app:layout_constraintTop_toBottomOf="@+id/blog"
-        app:srcCompat="@android:drawable/ic_input_delete"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@android:drawable/ic_input_delete" />
 
     <TextView
         android:id="@+id/inputTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="53dp"
         android:hint="@string/_0"
         android:textAlignment="viewEnd"
         android:textColor="#fff"
@@ -383,8 +385,9 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/outputTextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/discountButton" />
 
     <TextView
         android:id="@+id/outputTextView"
@@ -398,5 +401,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputTextView" />
+
+    <ImageButton
+        android:id="@+id/discountButton"
+        android:layout_width="41dp"
+        android:layout_height="47dp"
+        android:background="#333"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/inputTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/discount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
