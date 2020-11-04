@@ -1,6 +1,7 @@
 package com.example.calculator;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Display;
@@ -18,7 +19,7 @@ import java.util.Stack;
 public class MainActivity extends AppCompatActivity {
     Button b0, bdot, bplus, bequals, buttonac, b1, b2, b3, bminus, b4, b5, b6, bmultiply, b7, b8, b9, bdivide, bpie, be, bopenbracket, bclosebracket, blog, bsin, bcos, btan, bsqrt, bpower;
     TextView inputTextView, outputTextView;
-    ImageButton bclear;
+    ImageButton bclear, discountButton;
     int sum = 0;
     double pi = Math.PI;
     boolean dotPresent = false;
@@ -256,9 +257,18 @@ public class MainActivity extends AppCompatActivity {
         btan = findViewById(R.id.btan);
         bsqrt = findViewById(R.id.bsqrt);
         bpower = findViewById(R.id.bpower);
+        discountButton = findViewById(R.id.discountButton);
 
         inputTextView = findViewById(R.id.inputTextView);
         outputTextView = findViewById(R.id.outputTextView);
+
+        discountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DiscountCalculator.class);
+                        startActivity(intent);
+            }
+        });
 
         b0.setOnClickListener(new View.OnClickListener() {
             @Override
