@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             String st = "";
             int flag = 0;//but of no country
             char currentCharacter = oldExpression.charAt(i);
-            if ("(sct".contains(Character.toString(currentCharacter)) && "0123456789)".contains(Character.toString(oldExpression.charAt(i - 1)))) {
+            if ("u(sct".contains(Character.toString(currentCharacter)) && "0123456789)".contains(Character.toString(oldExpression.charAt(i - 1)))) {
                 st = oldExpression.substring(0, i) + "*" + oldExpression.substring(i);
                 flag = 1;
             }
